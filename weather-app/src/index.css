@@ -1,7 +1,120 @@
-.app{
+:root{
+  --Cadet-Gray:#A3ABB7;
+  --Celestial-Blue:#1A9DFA;
+  --Indigo-Dye:#295071;
+  --French-Gray:#828486;
+  --Off-White:#F1F1F3;
+}
+body{
+  margin: 15px;
+  font-family: sans-serif;
+  height: 90vh;
+}
+.root-layout{
   width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+main{
+  width: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+nav{
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #dfdfdf;
+  width: fit-content;
+  border-radius: 20px;
+  height: 90vh;
+  padding: 10px 20px 10px 20px;
+}
+.m-links{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: var(--French-Gray);
+  border-radius: 15px;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 1.5rem;
+  transition: all 0.3s linear;
+  margin: 10px 1px 10px 1px;
+}
+.m-links p{
+  margin: 0;
+}
+.m-links:hover{
+  color: var(--Celestial-Blue);
+  background-color: var(--Cadet-Gray);
+}
+.active{
+  color: var(--Celestial-Blue);
+  background-color: var(--Cadet-Gray);
+}
+.search{
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+}
+.search-bar{
+  width: fit-content;
+  display: flex;
+  align-items: center;
   justify-content: space-evenly;
+  height: 11%;
+}
+.search-bar input{
+  border: 0;
+  background-color: #eeeeee;
+  border-radius: 10px;
+  width: 45rem;
+  height: 55px;
+  padding: 1px 1px 1px 15px;
+  color: var(--Cadet-Gray);
+  font-size: 2rem;
+}
+.search-bar > input:focus{
+  border: 1px dotted var(--Indigo-Dye);
+}
+.search-bar button{
+  background-color: var(--Cadet-Gray);
+  border-radius: 10px;
+  margin-left:15px;
+  display: flex;
+  align-items: center;
+  height: 58px;
+  cursor: pointer;
+  padding: 10px 15px 10px 15px ;
+  border: none;
+  font-size: 2rem;
+  color: var(--Celestial-Blue);
+}
+.search-results{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 88%;
+  max-height: 89%;
+  overflow: hidden;
+}
+
+/*Loading Animation*/
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 7rem;
+  height: 7rem;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

@@ -1,20 +1,28 @@
 import { useState } from 'react'
 import './index.css'
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider
+} from 'react-router-dom'
+
+import RootLayout from './Layouts/RootLayout'
+import Home from './pages/Home'
+import Search from './pages/Search'
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path='/' element={<RootLayout/>}>
+      <Route index element={<Home/>}/>
+      <Route path='search' element={<Search/>}/>
+    </Route>
+  )
+)
 
 function App() {
-  const [color,setColor] = useState(`rgb(255,255,255)`)
-  const RandomColor = ():void =>{
-    let r:number = Math.floor(Math.random()*255);
-    let g:number = Math.floor(Math.random()*255);
-    let b:number = Math.floor(Math.random()*255);
-    setColor(`rgb(${r},${g},${b})`)
-  }
-
   return (
-    <div className="app" style={{backgroundColor:color}}>
-      <button onClick={RandomColor}>Generate</button>
-      <p>Current color is: {color}</p>
-    </div>
+    <RouterProvider router={router}/>
   )
 }
 
