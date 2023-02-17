@@ -118,3 +118,33 @@ nav{
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+.output{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5em;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 20%;
+  height: 45vh;
+  justify-content: space-evenly;
+  font-weight: bold;
+  padding: 0 1em 0 1em;
+}
+.weather-status p{
+  margin: 0;
+}
+.weather-status{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.weather-details{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.weather-details p{
+  margin: 5px 1px 5px 1px;
+}
