@@ -3,6 +3,7 @@ const Today_date = ():string=>{
     let day:number = date.getDate()
     let month:number = date.getMonth()
     let monthName:string = ''; 
+    let suffix:string = ''
     let year:number = date.getFullYear()
 
     switch(month){
@@ -46,7 +47,16 @@ const Today_date = ():string=>{
             console.log('Hi')
             break;
     }
-    return `Today is ${day} of ${monthName} ${year}`
+    if(day.toString().split('').pop() === '1'){
+        suffix = 'st'
+    }else if(day.toString().split('').pop() === '2'){
+        suffix = 'nd'
+    }else if(day.toString().split('').pop() === '3'){
+        suffix = 'rd'
+    }else{
+        suffix = 'th'
+    }
+    return `Today is the ${day}${suffix} of ${monthName} ${year}`
 }
 
 const ME = 'Hola'
