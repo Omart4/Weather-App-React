@@ -13,7 +13,7 @@ const RootLayout = () => {
                     <FontAwesomeIcon icon={solid('magnifying-glass')} />
                     <p>Search</p>
                 </NavLink>
-                <NavLink to='Weather' className="m-links">
+                <NavLink to='weather' className="m-links">
                     <FontAwesomeIcon icon={solid("cloud-moon-rain")} />
                     <p>Weather</p>
                 </NavLink>

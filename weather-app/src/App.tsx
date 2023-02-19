@@ -11,7 +11,7 @@ import RootLayout from './Layouts/RootLayout'
 import Home from './pages/Home'
 import Search from './pages/Search'
 import Weather from './pages/Weather'
-import CityWeather from './components/CityWeather'
+import CityWeather, { weatherLoader } from './components/CityWeather'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -19,7 +19,7 @@ const router = createBrowserRouter(
       <Route index element={<Home/>}/>
       <Route path='search' element={<Search/>}/>
       <Route path='weather' element={<Weather/>}>
-        <Route path=':city' element={<CityWeather/>}/>
+        <Route path=':city' element={<CityWeather/>} loader={weatherLoader}/>
       </Route>
     </Route>
   )
