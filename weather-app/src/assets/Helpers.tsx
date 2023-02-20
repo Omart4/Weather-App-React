@@ -59,6 +59,9 @@ const Today_date = ():string=>{
     return `Today is the ${day}${suffix} of ${monthName} ${year}`
 }
 
-const ME = 'Hola'
-
-export {Today_date , ME}
+export interface citySearch {
+    name:string;
+    country:string;
+    temp:number
+}
+export {Today_date}
